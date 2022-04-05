@@ -17,3 +17,6 @@ function anotherFunChallenge(input) {
   let whoAmI = "I don't know"; // O(1)
 }
 // My answer : O(7n+4)
+
+// Actual answer :
+// O(4+5n) or O(4+7n) (for loop can be included as O(n))
