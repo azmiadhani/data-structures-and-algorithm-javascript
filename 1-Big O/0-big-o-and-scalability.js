@@ -2,7 +2,7 @@
 // @date    6/4/2022
 
 // because the use node to run this file, I need to use the require function to import the array
-const { performance } = require('perf_hooks');
+const { performance } = require("perf_hooks");
 
 // @desc    function to find "nemo" in an array
 // this function use perfomance timer to measure runtime
@@ -14,32 +14,32 @@ const findNemo = (array) => {
   // loop through the array
   for (let i = 0; i < array.length; i++) {
     // if the value of the array at the current index is "nemo"
-    if (array[i] === 'nemo') {
-      console.log('Found Nemo!');
+    if (array[i] === "nemo") {
+      console.log("Found Nemo!");
     }
   }
   // timer ends
   let t1 = performance.now();
   // outputs runtime of the function
   // time depends on computer specs, so it's not always the same on every computer
-  console.log('Call to find Nemo took ' + (t1 - t0) + ' milliseconds');
+  console.log("Call to find Nemo took " + (t1 - t0) + " milliseconds");
 };
 
-const nemo = ['nemo'];
+const nemo = ["nemo"];
 const everyone = [
-  'dory',
-  'bruce',
-  'marlin',
-  'nemo',
-  'gill',
-  'bloat',
-  'nigel',
-  'squirt',
-  'darla',
-  'hank',
+  "dory",
+  "bruce",
+  "marlin",
+  "nemo",
+  "gill",
+  "bloat",
+  "nigel",
+  "squirt",
+  "darla",
+  "hank",
 ];
 // create an array with 100 value filled with fill param
-const large = new Array(10000000).fill('nemos');
+const large = new Array(10000000).fill("nemos");
 
 // this will run faster
 findNemo(nemo);
