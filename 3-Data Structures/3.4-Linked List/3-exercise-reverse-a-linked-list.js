@@ -132,6 +132,12 @@ class LinkedList {
   }
   // reverse a linked list
   reverse() {
+    // validation
+    // if there's only one linked list, then do nothing
+    if (this.head.next == null) {
+      return this.printList();
+    }
+
     // this.length as counter
     let counter = this.length;
     // looph through currentHead
