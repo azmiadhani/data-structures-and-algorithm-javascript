@@ -131,6 +131,7 @@ class LinkedList {
     return this.printList();
   }
   // reverse a linked list
+  // O(n^2) can be optimized to O(n) by checking this out : https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12324578#questions
   reverse() {
     // validation
     // if there's only one linked list, then do nothing
