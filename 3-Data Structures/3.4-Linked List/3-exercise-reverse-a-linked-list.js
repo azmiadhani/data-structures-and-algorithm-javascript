@@ -108,7 +108,6 @@ class LinkedList {
   // delete
   // O(n)
   remove(index) {
-    console.log(this.printList());
     // check params
     if (index >= this.length - 1) {
       // if index higher is higher or equal to total length -1 then delete tail node
@@ -130,6 +129,45 @@ class LinkedList {
     }
     this.length--;
     return this.printList();
+  }
+  // reverse a linked list
+  reverse() {
+    // this.length as counter
+    let counter = this.length;
+    // looph through currentHead
+    while (counter !== 0) {
+      // insert into position
+      this.insert(counter, this.head.value);
+      // remove the head
+      this.remove(0);
+      counter--;
+    }
+    return this.printList();
+  }
+  // reverse though process
+  // reverse a linked list
+  reverseThoughProcess() {
+    // loop through linked list while counter !== 0
+    // copy this.head to currentHead (Object assign)
+    // insert(counter-1, currentHead.value)
+    // delete this.head
+    // counter increment
+    // counter 3
+    // value   1
+    // [1, 5, 16, 66]
+    // [1, 5, 16, 66, 1]
+    // [5, 16, 66, 1]
+    // counter 2
+    // value   5
+    // [1, 5, 16, 66]
+    // [5, 16, 66, 5, 1]
+    // [16, 66, 5, 1]
+    // counter 1
+    // value   16
+    // [16, 66, 5, 1]
+    // [16, 66, 5, 1, 16]
+    // [66, 5, 1, 16]
+    // counter
   }
 }
 
@@ -159,4 +197,8 @@ myLinkedList.insert(20, 66);
 myLinkedList.remove(1);
 myLinkedList.remove(1);
 
-console.log(myLinkedList.printList());
+// console.log(myLinkedList.printList());
+console.log(myLinkedList.printList(), 'After remove');
+
+myLinkedList.reverse();
+console.log(myLinkedList.printList(), 'After Reverse');
