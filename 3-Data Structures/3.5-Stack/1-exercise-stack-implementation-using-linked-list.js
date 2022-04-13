@@ -15,11 +15,13 @@ class Stack {
     this.bottom = null;
     this.length = 0;
   }
-  // get top
+  // get top / get last inserted / peek
+  // O(1)
   peek() {
     return this.top;
   }
-  // pop to new top
+  // push to new top
+  // O(1)
   push(value) {
     const newNode = new Node(value);
     // check if stack is empty
@@ -42,6 +44,7 @@ class Stack {
     return this;
   }
   // pop the top
+  // O(1)
   pop() {
     // if stack is not empty, then pop the last item
     if (this.length > 0) {
